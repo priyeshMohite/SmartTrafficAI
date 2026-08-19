@@ -1,0 +1,129 @@
+.analytics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.analytics-header h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 20px;
+}
+
+.analytics-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.analytics-live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  color: #4ade80;
+  background: #052e16;
+  border: 1px solid #166534;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.analytics-live span {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: analyticsPulse 1.5s infinite;
+}
+
+.analytics-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.analytics-metric {
+  padding: 12px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.analytics-metric span {
+  display: block;
+  margin-bottom: 5px;
+  color: #64748b;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.analytics-metric strong {
+  color: #f8fafc;
+  font-size: 18px;
+}
+
+.analytics-metric small {
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.analytics-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #334155;
+  color: #64748b;
+  font-size: 9px;
+}
+
+.analytics-footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.analytics-dot {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: analyticsPulse 1.5s infinite;
+}
+
+@keyframes analyticsPulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .analytics-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .analytics-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .analytics-metrics {
+    grid-template-columns: 1fr;
+  }
+}

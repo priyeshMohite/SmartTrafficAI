@@ -1,0 +1,737 @@
+/* ==========================================
+   INCIDENT PANEL
+========================================== */
+
+.incident-panel {
+  margin-top: 20px;
+  padding: 20px;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  color: white;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.incident-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #334155;
+}
+
+
+.incident-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.incident-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #450a0a;
+
+  border: 1px solid #991b1b;
+
+  border-radius: 10px;
+
+  font-size: 21px;
+}
+
+
+.incident-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.incident-heading p {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.incident-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+.incident-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+
+/* DETECTED */
+
+.incident-status.detected {
+  color: #f87171;
+
+  background: #450a0a;
+
+  border: 1px solid #991b1b;
+}
+
+
+.incident-status.detected span {
+  background: #ef4444;
+
+  animation: incidentPulse 1.2s infinite;
+}
+
+
+/* DISPATCHED */
+
+.incident-status.dispatching {
+  color: #fbbf24;
+
+  background: #451a03;
+
+  border: 1px solid #92400e;
+}
+
+
+.incident-status.dispatching span {
+  background: #f59e0b;
+
+  animation: incidentPulse 0.8s infinite;
+}
+
+
+/* RESPONDING */
+
+.incident-status.responding {
+  color: #38bdf8;
+
+  background: #082f49;
+
+  border: 1px solid #075985;
+}
+
+
+.incident-status.responding span {
+  background: #38bdf8;
+
+  animation: incidentPulse 1.2s infinite;
+}
+
+
+/* ARRIVED */
+
+.incident-status.arrived {
+  color: #a78bfa;
+
+  background: #2e1065;
+
+  border: 1px solid #6d28d9;
+}
+
+
+.incident-status.arrived span {
+  background: #8b5cf6;
+}
+
+
+/* RESOLVED */
+
+.incident-status.resolved {
+  color: #4ade80;
+
+  background: #052e16;
+
+  border: 1px solid #166534;
+}
+
+
+.incident-status.resolved span {
+  background: #22c55e;
+}
+
+
+/* ==========================================
+   PULSE
+========================================== */
+
+@keyframes incidentPulse {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.incident-empty {
+  min-height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.incident-empty-icon {
+  font-size: 36px;
+
+  margin-bottom: 10px;
+}
+
+
+.incident-empty h3 {
+  margin: 0 0 5px;
+
+  color: #e2e8f0;
+
+  font-size: 16px;
+}
+
+
+.incident-empty p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   INCIDENT SUMMARY
+========================================== */
+
+.incident-summary {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 15px;
+
+  padding: 14px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 9px;
+}
+
+
+.incident-main {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+.incident-type-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1e293b;
+
+  border-radius: 8px;
+
+  font-size: 20px;
+}
+
+
+.incident-label {
+  color: #64748b;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.incident-main h3 {
+  margin: 2px 0;
+
+  color: #f8fafc;
+
+  font-size: 16px;
+}
+
+
+.incident-main p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+/* ==========================================
+   PRIORITY
+========================================== */
+
+.priority-badge {
+  padding: 7px 11px;
+
+  flex-shrink: 0;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.priority-badge.critical {
+  color: #fca5a5;
+
+  background: #450a0a;
+
+  border: 1px solid #991b1b;
+}
+
+
+.priority-badge.high {
+  color: #fdba74;
+
+  background: #431407;
+
+  border: 1px solid #9a3412;
+}
+
+
+.priority-badge.medium {
+  color: #fde68a;
+
+  background: #422006;
+
+  border: 1px solid #92400e;
+}
+
+
+.priority-badge.low {
+  color: #86efac;
+
+  background: #052e16;
+
+  border: 1px solid #166534;
+}
+
+
+/* ==========================================
+   INFORMATION GRID
+========================================== */
+
+.incident-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+
+.incident-info {
+  min-width: 0;
+
+  padding: 11px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 7px;
+}
+
+
+.incident-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+.incident-info strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #cbd5e1;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+.incident-info strong.dispatching {
+  color: #fbbf24;
+}
+
+
+.incident-info strong.responding {
+  color: #38bdf8;
+}
+
+
+.incident-info strong.arrived {
+  color: #a78bfa;
+}
+
+
+.incident-info strong.resolved {
+  color: #4ade80;
+}
+
+
+/* ==========================================
+   AI RECOMMENDATION
+========================================== */
+
+.ai-recommendation {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  padding: 12px;
+
+  background: #172554;
+
+  border: 1px solid #3730a3;
+
+  border-radius: 8px;
+}
+
+
+.ai-recommendation-icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #312e81;
+
+  border-radius: 7px;
+
+  font-size: 16px;
+}
+
+
+.ai-recommendation span {
+  display: block;
+
+  color: #818cf8;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.ai-recommendation p {
+  margin: 4px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.incident-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+
+.incident-actions button {
+  flex: 1;
+
+  padding: 10px 15px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.incident-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+
+.incident-actions button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.45;
+}
+
+
+/* DISPATCH */
+
+.dispatch-button {
+  color: white;
+
+  background: #0369a1;
+
+  border: 1px solid #0284c7;
+}
+
+
+.dispatch-button:hover:not(:disabled) {
+  background: #0284c7;
+}
+
+
+/* RESOLVE */
+
+.resolve-button {
+  color: #86efac;
+
+  background: #052e16;
+
+  border: 1px solid #166534;
+}
+
+
+.resolve-button:hover:not(:disabled) {
+  background: #14532d;
+}
+
+
+.resolve-button:not(:disabled) {
+  box-shadow:
+    0 0 10px
+    rgba(34, 197, 94, 0.12);
+}
+
+
+/* ==========================================
+   ACTION MESSAGE
+========================================== */
+
+.incident-action-message {
+  margin-top: 10px;
+
+  padding: 9px 11px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 7px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.incident-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 12px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #334155;
+
+  color: #64748b;
+
+  font-size: 9px;
+}
+
+
+.incident-footer > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.incident-live-dot {
+  width: 6px;
+  height: 6px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 6px
+    rgba(34, 197, 94, 0.8);
+
+  animation: incidentPulse 1.5s infinite;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .incident-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .incident-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .incident-summary {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .incident-actions {
+    flex-direction: column;
+  }
+
+}

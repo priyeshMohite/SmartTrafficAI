@@ -1,0 +1,159 @@
+.navbar{
+
+    height:80px;
+
+    background:#111827;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 35px;
+
+    border-bottom:1px solid #334155;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:25px;
+
+    margin:0;
+}
+
+.logo span{
+
+    color:#94a3b8;
+
+    font-size:13px;
+}
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    color:white;
+}
+
+.live-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#1e293b;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    color:#22c55e;
+
+    font-weight:bold;
+}
+
+.live-dot{
+
+    width:10px;
+
+    height:10px;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.6);
+
+        opacity:.4;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.date,
+.time{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+}
+
+.bell{
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.bell:hover{
+
+    color:#38bdf8;
+
+    transform:rotate(15deg);
+}
+
+.admin{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#1e293b;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+}

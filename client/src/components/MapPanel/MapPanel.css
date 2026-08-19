@@ -1,0 +1,596 @@
+/* ==========================================
+   MAP PANEL
+========================================== */
+
+.map-panel {
+
+  width: 100%;
+
+  background: #0f172a;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.map-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+
+}
+
+
+.map-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+.map-title h2 {
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+}
+
+
+/* ==========================================
+   LIVE STATUS
+========================================== */
+
+.map-live-status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 4px 9px;
+
+  background: #052e16;
+
+  border: 1px solid #166534;
+
+  border-radius: 20px;
+
+  color: #4ade80;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+}
+
+
+.map-live-dot {
+
+  width: 6px;
+
+  height: 6px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  animation: mapPulse 1.5s infinite;
+
+}
+
+
+/* ==========================================
+   CONTROLS
+========================================== */
+
+.controls {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+.filter-dropdown,
+.search-box {
+
+  height: 34px;
+
+  padding: 0 10px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 7px;
+
+  color: #e2e8f0;
+
+  outline: none;
+
+  font-size: 11px;
+
+  box-sizing: border-box;
+
+}
+
+
+.filter-dropdown {
+
+  cursor: pointer;
+
+}
+
+
+.filter-dropdown option {
+
+  background: #111827;
+
+  color: #e2e8f0;
+
+}
+
+
+.search-box {
+
+  width: 160px;
+
+}
+
+
+.search-box::placeholder {
+
+  color: #64748b;
+
+}
+
+
+.filter-dropdown:focus,
+.search-box:focus {
+
+  border-color: #38bdf8;
+
+}
+
+
+/* ==========================================
+   MAP
+========================================== */
+
+.traffic-map {
+
+  width: 100%;
+
+  height: 500px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+}
+
+
+/* ==========================================
+   LEAFLET POPUP
+========================================== */
+
+.incident-popup {
+
+  min-width: 200px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+}
+
+
+.popup-title {
+
+  margin-bottom: 8px;
+
+  color: #0f172a;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+}
+
+
+.popup-location {
+
+  margin-bottom: 10px;
+
+  color: #334155;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+}
+
+
+.popup-info {
+
+  margin-top: 6px;
+
+  color: #475569;
+
+  font-size: 11px;
+
+}
+
+
+.popup-info strong {
+
+  color: #0f172a;
+
+}
+
+
+/* ==========================================
+   PRIORITY COLORS
+========================================== */
+
+.priority-low {
+
+  color: #16a34a;
+
+  font-weight: 700;
+
+}
+
+
+.priority-medium {
+
+  color: #ca8a04;
+
+  font-weight: 700;
+
+}
+
+
+.priority-high {
+
+  color: #ea580c;
+
+  font-weight: 700;
+
+}
+
+
+.priority-critical {
+
+  color: #dc2626;
+
+  font-weight: 700;
+
+}
+
+
+/* ==========================================
+   POPUP BUTTON
+========================================== */
+
+.popup-action {
+
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 8px 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+}
+
+
+.popup-action:hover {
+
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+
+}
+
+
+/* ==========================================
+   ROUTE LEGEND
+========================================== */
+
+.route-legend {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 10px;
+
+  padding: 9px 11px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 8px;
+
+}
+
+
+.legend-title {
+
+  color: #f8fafc;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+}
+
+
+.legend-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+
+}
+
+
+.legend-line {
+
+  width: 25px;
+
+  height: 4px;
+
+  display: inline-block;
+
+  border-radius: 5px;
+
+}
+
+
+.legend-line.optimized {
+
+  background: #ef4444;
+
+}
+
+
+.legend-line.alternative-blue {
+
+  background: #3b82f6;
+
+}
+
+
+.legend-line.alternative-green {
+
+  background: #22c55e;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.map-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 10px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #334155;
+
+  color: #64748b;
+
+  font-size: 9px;
+
+}
+
+
+.map-footer > span:first-child {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+}
+
+
+.map-footer-dot {
+
+  width: 6px;
+
+  height: 6px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes mapPulse {
+
+  0% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    opacity: 0.35;
+
+    transform: scale(0.8);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .map-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .controls {
+
+    width: 100%;
+
+  }
+
+  .search-box {
+
+    flex: 1;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .map-panel {
+
+    padding: 12px;
+
+  }
+
+  .map-title {
+
+    flex-wrap: wrap;
+
+  }
+
+  .controls {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+  .filter-dropdown,
+  .search-box {
+
+    width: 100%;
+
+  }
+
+  .traffic-map {
+
+    height: 400px;
+
+  }
+
+  .route-legend {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+  }
+
+  .map-footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+
+  }
+
+}

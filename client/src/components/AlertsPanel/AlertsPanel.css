@@ -1,0 +1,511 @@
+/* ==========================================
+   ALERTS PANEL
+========================================== */
+
+.alerts-panel {
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  height: fit-content;
+
+  max-height: 520px;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.alerts-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #334155;
+
+}
+
+
+.alerts-header h2 {
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  margin: 0 0 4px;
+
+}
+
+
+.alerts-header p {
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  margin: 0;
+
+}
+
+
+/* ==========================================
+   ALERT COUNT
+========================================== */
+
+.alert-count {
+
+  min-width: 28px;
+
+  height: 28px;
+
+  padding: 0 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ef4444;
+
+  color: white;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 0 12px rgba(239, 68, 68, 0.35);
+
+}
+
+
+/* ==========================================
+   ALERT LIST
+========================================== */
+
+.alerts-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  overflow-y: auto;
+
+  max-height: 390px;
+
+  padding-right: 4px;
+
+}
+
+
+.alerts-list::-webkit-scrollbar {
+
+  width: 5px;
+
+}
+
+
+.alerts-list::-webkit-scrollbar-track {
+
+  background: #0f172a;
+
+  border-radius: 10px;
+
+}
+
+
+.alerts-list::-webkit-scrollbar-thumb {
+
+  background: #475569;
+
+  border-radius: 10px;
+
+}
+
+
+/* ==========================================
+   ALERT ITEM
+========================================== */
+
+.alert-item {
+
+  display: flex;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+}
+
+
+.alert-item:hover {
+
+  transform: translateY(-2px);
+
+  background: #172033;
+
+  border-color: #475569;
+
+}
+
+
+.alert-item.critical {
+
+  border-left: 4px solid #ef4444;
+
+  animation: criticalPulse 2s infinite;
+
+}
+
+
+.alert-item.high {
+
+  border-left: 4px solid #f97316;
+
+}
+
+
+/* ==========================================
+   CRITICAL ANIMATION
+========================================== */
+
+@keyframes criticalPulse {
+
+  0% {
+
+    box-shadow:
+      0 0 0 rgba(239, 68, 68, 0);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 14px rgba(239, 68, 68, 0.12);
+
+  }
+
+  100% {
+
+    box-shadow:
+      0 0 0 rgba(239, 68, 68, 0);
+
+  }
+
+}
+
+
+/* ==========================================
+   ALERT ICON
+========================================== */
+
+.alert-icon {
+
+  width: 38px;
+
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #1e293b;
+
+  border-radius: 8px;
+
+  font-size: 20px;
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.alert-content {
+
+  min-width: 0;
+
+  flex: 1;
+
+}
+
+
+.alert-title-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+}
+
+
+.alert-title-row strong {
+
+  color: #f8fafc;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+
+.alert-priority {
+
+  padding: 3px 6px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+}
+
+
+.alert-priority.critical {
+
+  color: #fecaca;
+
+  background: #450a0a;
+
+}
+
+
+.alert-priority.high {
+
+  color: #fed7aa;
+
+  background: #431407;
+
+}
+
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.alert-location {
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  margin: 6px 0 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.alert-details {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 7px;
+
+}
+
+
+.alert-details span {
+
+  padding: 3px 6px;
+
+  background: #1e293b;
+
+  border-radius: 4px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+
+}
+
+
+/* ==========================================
+   NO ALERTS
+========================================== */
+
+.no-alerts {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  color: #64748b;
+
+}
+
+
+.no-alert-icon {
+
+  font-size: 32px;
+
+  margin-bottom: 8px;
+
+}
+
+
+.no-alerts p {
+
+  margin: 0;
+
+  font-size: 13px;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.alerts-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 15px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #334155;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+}
+
+
+.alert-live-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 7px rgba(34, 197, 94, 0.8);
+
+  animation: alertLivePulse 1.5s infinite;
+
+}
+
+
+@keyframes alertLivePulse {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .alerts-panel {
+
+    padding: 15px;
+
+  }
+
+  .alert-title-row {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+  }
+
+}
